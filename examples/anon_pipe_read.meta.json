@@ -1,0 +1,29 @@
+{
+  "file": "fs/pipe.c",
+  "function": "anon_pipe_read",
+  "lines": 138,
+  "start": 343,
+  "end": 480,
+  "risk": {
+    "score": 27,
+    "level": "high",
+    "reasons": [
+      "user_memory +10",
+      "locking +6",
+      "barriers +4",
+      "lock/unlock count mismatch (2 vs 1; conditional/early-exit paths?) +3",
+      "length >100 lines +4"
+    ],
+    "acquires": 2,
+    "releases": 1
+  },
+  "model": "grok-4.7-xhigh",
+  "tokens": 4538,
+  "budget": 120000,
+  "trimmed": [],
+  "resolvers": [
+    "ctags",
+    "git grep"
+  ],
+  "notes": []
+}

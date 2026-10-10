@@ -1,0 +1,4 @@
+ts,run_id,mode,file,function,model,attempt,status,rc,duration_ms,api_duration_ms,est_input_tokens,est_output_tokens,reported_input_tokens,reported_output_tokens,reported_cache_read_tokens,reported_cache_write_tokens,input_mode,cache_key,session_id,request_id,note
+2026-10-09T15:36:41+08:00,20261009-153507,func,fs/pipe.c,pipe_lock,grok-4.7-high,1,ok,0,93506,63769,9768,1,22851,3323,1152,0,stdin,c5f653ce091a6bd53666e8f6,d4a3ea49-088f-4f0f-903f-e565097fde0f,ce5b8755-58f0-4ec7-89dc-318aeb4c2623,
+2026-10-09T15:38:39+08:00,20261009-153651,func,fs/pipe.c,free_pipe_info,grok-4.7-high,1,ok,0,107938,102517,23073,1,18545,7825,5888,0,arg,3c6fbbc4a584e166ca589fc8,6cf0f22d-35c4-4dd0-84c9-df879631046a,69954667-81b7-4fea-aa30-5e4fefc8b8ec,
+2026-10-09T15:41:42+08:00,20261009-154052,patch,fs/pipe.c,put_pipe_info,grok-4.7-high,1,ok,0,49733,43692,23966,179,18416,2924,5888,0,arg,70e943c7fba0a02c018f80be,fdf48b18-b6fe-4d50-aec8-065f170831e3,9de8475e-77f3-4c54-b1fe-4308abfaaf7e,

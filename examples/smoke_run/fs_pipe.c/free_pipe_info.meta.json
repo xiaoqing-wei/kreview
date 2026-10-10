@@ -1,0 +1,26 @@
+{
+  "file": "fs/pipe.c",
+  "function": "free_pipe_info",
+  "lines": 25,
+  "start": 924,
+  "end": 948,
+  "risk": {
+    "score": 7,
+    "level": "medium",
+    "reasons": [
+      "refcount +3",
+      "alloc_free +4"
+    ],
+    "acquires": 0,
+    "releases": 0
+  },
+  "model": "grok-4.7-high",
+  "tokens": 1367,
+  "budget": 60000,
+  "trimmed": [],
+  "resolvers": [
+    "ctags",
+    "git grep"
+  ],
+  "notes": []
+}

@@ -1,0 +1,26 @@
+{
+  "side": "new",
+  "side_note": "working tree HEAD == range end (post-image)",
+  "targets": [
+    {
+      "file": "fs/pipe.c",
+      "function": "put_pipe_info",
+      "start": 792,
+      "end": 803,
+      "line_hint": 792,
+      "hunks": [
+        "@@ -794,16 +794,14 @@ static void put_pipe_info(struct inode *inode, struct pipe_inode_info *pipe)\n \tint kill = 0;\n \n \tspin_lock(&inode->i_lock);\n \tif (!--pipe->files) {\n \t\tinode->i_pipe = NULL;\n-\t\tkill = 1;\n+\t\tfree_pipe_info(pipe);\n+\t\treturn;\n \t}\n \tspin_unlock(&inode->i_lock);\n-\n-\tif (kill)\n-\t\tfree_pipe_info(pipe);\n }\n \n static int\n pipe_release(struct inode *inode, struct file *file)\n {"
+      ]
+    }
+  ],
+  "unmapped": [],
+  "files": [
+    "fs/pipe.c"
+  ],
+  "info": {
+    "source": "git",
+    "spec": "HEAD^..HEAD",
+    "from": "HEAD^",
+    "to": "HEAD"
+  }
+}

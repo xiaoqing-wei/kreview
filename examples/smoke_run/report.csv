@@ -1,0 +1,3 @@
+severity,confidence,file,line,function,category,rationale,sources,dupes
+critical,0.98,fs/pipe.c,800,put_pipe_info,locking,"When --pipe->files hits zero, the function returns while inode->i_lock (taken at line 796) is still held; spin_unlock at line 802 is skipped. Every final put (pipe_release, fifo_open error, create_pipe_files failure) leaks the spinlock and later i_lock users deadlock.",put_pipe_info()@grok-4.7-high,1
+critical,0.93,fs/pipe.c,799,put_pipe_info,locking,"free_pipe_info() now runs under inode->i_lock. It calls watch_queue_clear, pipe_buf_release, free_uid, __free_page, and kfree, which can sleep or take sleeping locks. The pre-patch code only set a kill flag under the lock and freed after spin_unlock.",put_pipe_info()@grok-4.7-high,1

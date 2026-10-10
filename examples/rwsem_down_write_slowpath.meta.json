@@ -1,0 +1,29 @@
+{
+  "file": "kernel/locking/rwsem.c",
+  "function": "rwsem_down_write_slowpath",
+  "lines": 101,
+  "start": 1138,
+  "end": 1238,
+  "risk": {
+    "score": 21,
+    "level": "high",
+    "reasons": [
+      "locking +6",
+      "atomics +6",
+      "lock/unlock count mismatch (4 vs 3; conditional/early-exit paths?) +3",
+      "goto error paths x2 +2",
+      "length >100 lines +4"
+    ],
+    "acquires": 4,
+    "releases": 3
+  },
+  "model": "grok-4.7-xhigh",
+  "tokens": 3675,
+  "budget": 120000,
+  "trimmed": [],
+  "resolvers": [
+    "ctags",
+    "git grep"
+  ],
+  "notes": []
+}

@@ -1,0 +1,3 @@
+#!/bin/sh
+# kreview entrypoint (see kreview.py / README.md)
+exec python3 "$(dirname "$(readlink -f "$0")")/kreview.py" "$@"

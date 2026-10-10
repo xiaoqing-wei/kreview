@@ -1,0 +1,26 @@
+{
+  "file": "fs/pipe.c",
+  "function": "put_pipe_info",
+  "lines": 12,
+  "start": 792,
+  "end": 803,
+  "risk": {
+    "score": 9,
+    "level": "medium",
+    "reasons": [
+      "refcount +3",
+      "locking +6"
+    ],
+    "acquires": 1,
+    "releases": 1
+  },
+  "model": "grok-4.7-high",
+  "tokens": 1260,
+  "budget": 60000,
+  "trimmed": [],
+  "resolvers": [
+    "ctags",
+    "git grep"
+  ],
+  "notes": []
+}

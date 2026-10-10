@@ -1,0 +1,43 @@
+{
+  "run_id": "20261009-154052",
+  "prompt_version": "2-d363efd75d",
+  "dry_run": false,
+  "context": {
+    "patch": {
+      "source": "git",
+      "spec": "HEAD^..HEAD",
+      "from": "HEAD^",
+      "to": "HEAD"
+    },
+    "unmapped": [],
+    "side": "new"
+  },
+  "est_total_tokens": 29966,
+  "jobs": [
+    {
+      "file": "fs/pipe.c",
+      "function": "put_pipe_info",
+      "model": "grok-4.7-high",
+      "risk": 9,
+      "level": "medium",
+      "bundle_tokens": 1260,
+      "est_input_tokens": 23966,
+      "input_mode": "arg",
+      "bundle": "/workspace/kreview/results_smoke/patch_HEAD/fs_pipe.c/put_pipe_info.bundle.md",
+      "cmd": [
+        "agent",
+        "-p",
+        "--model",
+        "grok-4.7-high",
+        "--mode",
+        "ask",
+        "--output-format",
+        "json",
+        "--trust",
+        "--workspace",
+        "<tmpdir>",
+        "<prompt via arg>"
+      ]
+    }
+  ]
+}

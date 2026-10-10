@@ -1,0 +1,26 @@
+{
+  "file": "fs/pipe.c",
+  "function": "pipe_lock",
+  "lines": 5,
+  "start": 88,
+  "end": 92,
+  "risk": {
+    "score": 6,
+    "level": "low",
+    "reasons": [
+      "locking +3",
+      "lock/unlock count mismatch (1 vs 0; conditional/early-exit paths?) +3"
+    ],
+    "acquires": 1,
+    "releases": 0
+  },
+  "model": "grok-4.7-high",
+  "tokens": 1062,
+  "budget": 120000,
+  "trimmed": [],
+  "resolvers": [
+    "ctags",
+    "git grep"
+  ],
+  "notes": []
+}
